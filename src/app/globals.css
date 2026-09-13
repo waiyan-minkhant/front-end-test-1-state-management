@@ -65,6 +65,16 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  body[data-scroll-locked] {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  html:has(body[data-scroll-locked]) {
+    overflow: hidden;
+    scrollbar-gutter: stable;
+  }
 }
 
 @keyframes dialog-overlay-in {
