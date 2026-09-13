@@ -26,7 +26,7 @@ export function TeamCard({
   onDelete: () => void;
 }) {
   return (
-    <Card>
+    <Card className="h-full">
       <CardHeader>
         <div className="flex items-start justify-between gap-3">
           <div>
@@ -41,7 +41,7 @@ export function TeamCard({
           </Badge>
         </div>
       </CardHeader>
-      <CardContent className="grid gap-2">
+      <CardContent className="grid flex-1 gap-2">
         {players.length === 0 ? (
           <p className="text-sm text-muted-foreground">No players assigned.</p>
         ) : (
@@ -54,7 +54,7 @@ export function TeamCard({
           </ul>
         )}
       </CardContent>
-      <CardFooter className="justify-end gap-2">
+      <CardFooter className="mt-auto justify-end gap-2">
         <Button
           type="button"
           variant="outline"
