@@ -95,7 +95,7 @@ export function TeamFormModal({ open, onOpenChange, team }: TeamFormModalProps) 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="flex max-h-[90vh] flex-col overflow-hidden sm:max-w-2xl">
-        <DialogHeader className="shrink-0">
+        <DialogHeader className="shrink-0 pr-8">
           <DialogTitle>{team ? "Edit team" : "Create team"}</DialogTitle>
           <DialogDescription>
             Team names must be unique. Player count is taken from the selected
@@ -105,7 +105,7 @@ export function TeamFormModal({ open, onOpenChange, team }: TeamFormModalProps) 
 
         <Form {...form}>
           <form
-            className="flex min-h-0 flex-1 flex-col gap-4"
+            className="flex min-h-0 flex-col gap-4 overflow-y-auto"
             onSubmit={form.handleSubmit(handleSubmit)}
             noValidate
           >
@@ -155,7 +155,7 @@ export function TeamFormModal({ open, onOpenChange, team }: TeamFormModalProps) 
               control={form.control}
               name="playerIds"
               render={({ field }) => (
-                <FormItem className="min-h-0">
+                <FormItem>
                   <TeamPlayerSelector
                     players={catalog}
                     selectedIds={field.value}
