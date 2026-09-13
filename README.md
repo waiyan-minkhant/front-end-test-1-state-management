@@ -6,6 +6,10 @@ Stack: Next.js App Router, TypeScript, Redux Toolkit, React-Redux, shadcn/ui, Ta
 
 Player data is **synthetic and deterministic**. It does not come from `balldontlie.io`. The data layer is isolated so a live API adapter can replace the mock repository later without changing domain rules, Redux shape, or UI.
 
+## Important notes
+
+The provided URL was not working (it only returns the website's landing page with a 404), so mock player data is used instead.
+
 ## Commands
 
 ```bash
